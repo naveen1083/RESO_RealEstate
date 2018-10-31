@@ -35,6 +35,6 @@ setup(
     install_requires=[
         'bs4==0.0.1',
         'urllib3==1.23',
-        'requests==2.19.1',
+        'requests==2.20.0',
     ],
 )

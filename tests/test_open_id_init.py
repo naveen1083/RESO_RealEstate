@@ -9,4 +9,4 @@ class TestOpenID(TestCase):
         with self.assertRaises(ValueError) as context:
             OpenIDAuthentication(reso='reso')
 
-        self.assertEquals('Must be of type RESO', str(context.exception))
+        self.assertEqual('Must be of type RESO', str(context.exception))

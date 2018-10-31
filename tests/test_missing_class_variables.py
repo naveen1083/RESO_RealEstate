@@ -13,7 +13,7 @@ class TestMissingClassVariables(TestCase):
         with self.assertRaises(MissingVariables) as context:
             check_needed_class_vars(reso, [variable])
 
-        self.assertEquals('Missing {} on {}'.format(variable, reso.__class__.__name__), str(context.exception))
+        self.assertEqual('Missing {} on {}'.format(variable, reso.__class__.__name__), str(context.exception))
 
     def test_validate_no_missing_variable(self):
         reso = RESO(client_id='some-client-id')

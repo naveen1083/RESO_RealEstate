@@ -13,14 +13,14 @@ class TestRequestTypeForming(TestCase):
     def test_accept_type_simple_case(self):
         accept_type = 'json'
         expected_result = 'application/json'
-        self.assertEquals(self.request_obj._form_request_accept_type(accept_type), expected_result)
+        self.assertEqual(self.request_obj._form_request_accept_type(accept_type), expected_result)
 
     def test_no_accept_type(self):
         accept_type = None
         expected_result = '*/*'
-        self.assertEquals(self.request_obj._form_request_accept_type(accept_type), expected_result)
+        self.assertEqual(self.request_obj._form_request_accept_type(accept_type), expected_result)
 
     def test_full_accept_type(self):
         accept_type = 'application/xml'
         expected_result = 'application/xml'
-        self.assertEquals(self.request_obj._form_request_accept_type(accept_type), expected_result)
+        self.assertEqual(self.request_obj._form_request_accept_type(accept_type), expected_result)
